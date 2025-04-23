@@ -2,29 +2,33 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clave Segura Pro</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clave Segura Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css" />
 </head>
 
 <body>
-    <main class="contenedor">
-        <h2>Clave Segura 🔐</h2>
-        <section class="output">
-            <input type="text" id="claveGenerada" readonly>
-            <button id="copiar">Copiar</button>
-        </section>
-        <section class="config">
-            <label for="tam">Tamaño: <span id="tamValor">10</span></label>
-            <input type="range" id="tam" min="6" max="25" value="10">
-            <label><input type="checkbox" id="mayus"> Incluir MAYÚS</label>
-            <label><input type="checkbox" id="num" checked> Números</label>
-            <label><input type="checkbox" id="simbolos"> Símbolos</label>
-        </section>
-        <button id="generar">Crear Contraseña</button>
-    </main>
-    <script src="main.js"></script>
+  <main class="contenedor">
+    <h2>🔐 Clave Segura</h2>
+    <section class="output">
+      <input type="text" id="claveGenerada" readonly />
+      <button id="copiar">Copiar</button>
+      <div id="nivelSeguridad"></div>
+    </section>
+    <section class="config">
+      <div class="item">
+        <label for="tam">Tamaño: <span id="tamValor">10</span></label>
+        <input type="range" id="tam" min="6" max="25" value="10" />
+      </div>
+      <div class="item"><label><input type="checkbox" id="mayus" /> MAYÚS</label></div>
+      <div class="item"><label><input type="checkbox" id="num" checked /> Números</label></div>
+      <div class="item"><label><input type="checkbox" id="simbolos" /> Símbolos</label></div>
+    </section>
+    <button id="generar">Crear Contraseña</button>
+  </main>
+  <script src="index.js"></script>
 </body>
 
 </html>
